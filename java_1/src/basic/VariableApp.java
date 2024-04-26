@@ -14,6 +14,9 @@ public class VariableApp {
 		
 		System.out.println("ab = " + ab);
 		
+		
+		System.out.println(2+0+2+""+4+"년");
+		
 	}
 
 }
