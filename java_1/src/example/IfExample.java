@@ -17,10 +17,10 @@ public class IfExample {
 
 		if (num % 4 == 0) {
 			System.out.println("4의 배수 입니다.");
-		} else {
+		} else
 			System.out.println("4의 배수가 아닙니다.");
 
-		}
+		
 
 		System.out.println("============================================================");
 		// 이름이 [홍길동]인 학생이 국어점수 89점, 영어점수 93점, 수학점수 95점을 받은 경우
