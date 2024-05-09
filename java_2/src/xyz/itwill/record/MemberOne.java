@@ -3,7 +3,7 @@ package xyz.itwill.record;
 public class MemberOne {
 	private String id;
 	private String name;
-	private String email;
+	private String email; 
 
 	public MemberOne() {
 		// TODO Auto-generated constructor stub
