@@ -26,6 +26,6 @@ public class DayCalculateApp {
 		}
 
 		scanner.close();
- 
+  
 	}
 }
