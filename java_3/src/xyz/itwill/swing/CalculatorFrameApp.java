@@ -180,6 +180,7 @@ public class CalculatorFrameApp extends JFrame implements ActionListener {
 
             label.setText(getLabel + strNum);
 
+            
          }
       }
 
