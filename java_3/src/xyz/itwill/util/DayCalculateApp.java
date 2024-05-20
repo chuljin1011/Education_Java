@@ -12,7 +12,7 @@ public class DayCalculateApp {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("출생일 ex) 1994-10-11 >> ");
+		System.out.print("출생일 ex) 1994-10-11 >> ");
 		String dateIn = scanner.nextLine();
 
 		try {
