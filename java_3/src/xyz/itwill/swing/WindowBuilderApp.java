@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
+import java.awt.TextArea;
+
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.Color;
@@ -61,16 +63,34 @@ public class WindowBuilderApp extends JFrame {
 		redButton.setForeground(new Color(255, 0, 0));
 		redButton.setFont(new Font("굴림체", Font.BOLD, 20));
 		panel.add(redButton);
+		redButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				textArea.setForeground(new Color(255, 0, 0));
+			}
+		});
 
 		greenButton = new JButton("초록색");
 		greenButton.setForeground(new Color(0, 255, 0));
 		greenButton.setFont(new Font("굴림체", Font.BOLD, 20));
 		panel.add(greenButton);
+		greenButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				textArea.setForeground(new Color(0, 255, 0));
+			}
+		});
 
 		blueButton = new JButton("파란색");
 		blueButton.setForeground(new Color(0, 0, 255));
 		blueButton.setFont(new Font("굴림체", Font.BOLD, 20));
 		panel.add(blueButton);
+		blueButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				textArea.setForeground(new Color(0, 0, 255));
+			}
+		});
 
 		JScrollPane scrollPane = new JScrollPane();
 		contentPane.add(scrollPane);

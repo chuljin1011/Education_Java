@@ -253,6 +253,7 @@ public class PenguinGameApp extends JFrame {
 						e.printStackTrace();
 					}
 				}
+				
 			}
 		}
 	}

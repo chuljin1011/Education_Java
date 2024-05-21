@@ -107,7 +107,7 @@ public class PenguinMoveApp extends JFrame {
 	@Override
 	public void paint(Graphics g) {
 
-//		super.paint(g);
+		super.paint(g);
 
 		g.drawImage(backImage, 0, 0, JFRAME_WIDTH, JFRAME_HEIGHT, this);
 
