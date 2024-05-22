@@ -13,6 +13,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
+import java.awt.Toolkit;
 
 public class StudentFrameApp extends JFrame {
 
@@ -38,6 +39,7 @@ public class StudentFrameApp extends JFrame {
 	 * Create the frame.
 	 */
 	public StudentFrameApp() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(StudentFrameApp.class.getResource("/images/stone.gif")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(700, 200, 500, 400);
 		contentPane = new JPanel();
