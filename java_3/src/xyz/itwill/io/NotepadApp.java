@@ -143,22 +143,17 @@ public class NotepadApp extends JFrame {
 					file = fileChooser.getSelectedFile();
 
 					try {
-						BufferedReader in = new BufferedReader(new FileReader(file.getAbsoluteFile()));
 						BufferedWriter out = new BufferedWriter(new FileWriter(file.getAbsoluteFile()));
 
 //					textArea.setText("");
 
-						while (true) {
-							String text = in.readLine();
-
-							if (text == null)
-								break;
-
+					
+							String text = textArea.getText();
 							out.write(text);
-						}
 
-						in.close();
-						out.close();
+ 
+							out.close();
+						
 					} catch (FileNotFoundException exception) {
 						JOptionPane.showMessageDialog(NotepadApp.this, "파일을 찾을 수 없습니다.");
 						// TODO: handle exception
@@ -169,14 +164,15 @@ public class NotepadApp extends JFrame {
 					}
 
 				} else if (option == JFileChooser.CANCEL_OPTION) {
-					return;
+//					return;
+//				}
+
+				} else if (eventSource == exit) {
+					System.exit(0);
+
 				}
-
-			} else if (eventSource == exit) {
-				System.exit(0);
-
 			}
-		}
 
+		}
 	}
 }

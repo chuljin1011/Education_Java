@@ -25,7 +25,7 @@ public class FileWriterApp {
 		out.close();
 		
 		System.out.println("[결과] c:/data/character.txt 파일을 확인해보세요. ");
-		
+		 
 	}
 
 }
