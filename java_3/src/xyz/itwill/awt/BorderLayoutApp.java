@@ -4,10 +4,10 @@ import java.awt.BorderLayout;
 import java.awt.Button;
 import java.awt.Frame;
 
-public class BoarderLayoutApp extends Frame {
+public class BorderLayoutApp extends Frame {
 	private static final long serialVersionUID = 1L;
 	
-	public BoarderLayoutApp(String title) {
+	public BorderLayoutApp(String title) {
 		super(title);
 		
 		Button button1 = new Button("Center");
@@ -33,7 +33,7 @@ public class BoarderLayoutApp extends Frame {
 	
 	
 	public static void main(String[] args) {
-		new BoarderLayoutApp("BorderLayout");
+		new BorderLayoutApp("BorderLayout");
 	}
 	
 

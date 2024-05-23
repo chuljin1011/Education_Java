@@ -137,23 +137,45 @@ public class NotepadApp extends JFrame {
 
 			} else if (eventSource == save) {
 
+				if (file != null) {
+					try {
+						BufferedWriter out = new BufferedWriter(new FileWriter(file.getAbsoluteFile()));
+
+						String text = textArea.getText();
+						out.write(text);
+
+						out.close();
+
+					} catch (FileNotFoundException exception) {
+						JOptionPane.showMessageDialog(NotepadApp.this, "파일을 찾을 수 없습니다.");
+						// TODO: handle exception
+					} catch (IOException exception) {
+						JOptionPane.showMessageDialog(NotepadApp.this, "프로그램에 문제가 발생 하였습니다.");
+						// TODO: handle exception
+
+           					}
+					return;
+
+				}
+
 				int option = fileChooser.showSaveDialog(NotepadApp.this);
 				if (option == JFileChooser.APPROVE_OPTION) {
-
 					file = fileChooser.getSelectedFile();
+					
+					if(file.toString().lastIndexOf(".") == -1) {
+						file = new File(file.toString()+".txt");
+					}
+					
+					setTitle(file.toString() + " - Java 메모장");
 
 					try {
 						BufferedWriter out = new BufferedWriter(new FileWriter(file.getAbsoluteFile()));
 
-//					textArea.setText("");
+						String text = textArea.getText();
+						out.write(text);
 
-					
-							String text = textArea.getText();
-							out.write(text);
+						out.close();
 
- 
-							out.close();
-						
 					} catch (FileNotFoundException exception) {
 						JOptionPane.showMessageDialog(NotepadApp.this, "파일을 찾을 수 없습니다.");
 						// TODO: handle exception
