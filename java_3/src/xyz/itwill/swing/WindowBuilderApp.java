@@ -6,8 +6,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.GridLayout;
-import java.awt.TextArea;
-
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.Color;
@@ -54,66 +52,76 @@ public class WindowBuilderApp extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
-
+		
 		JPanel panel = new JPanel();
 		contentPane.add(panel, BorderLayout.NORTH);
 		panel.setLayout(new GridLayout(1, 3, 3, 0));
-
+		
 		redButton = new JButton("빨간색");
 		redButton.setForeground(new Color(255, 0, 0));
 		redButton.setFont(new Font("굴림체", Font.BOLD, 20));
 		panel.add(redButton);
-		redButton.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				textArea.setForeground(new Color(255, 0, 0));
-			}
-		});
-
+		
 		greenButton = new JButton("초록색");
 		greenButton.setForeground(new Color(0, 255, 0));
 		greenButton.setFont(new Font("굴림체", Font.BOLD, 20));
 		panel.add(greenButton);
-		greenButton.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				textArea.setForeground(new Color(0, 255, 0));
-			}
-		});
-
+		
 		blueButton = new JButton("파란색");
 		blueButton.setForeground(new Color(0, 0, 255));
 		blueButton.setFont(new Font("굴림체", Font.BOLD, 20));
 		panel.add(blueButton);
-		blueButton.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				textArea.setForeground(new Color(0, 0, 255));
-			}
-		});
-
+		
 		JScrollPane scrollPane = new JScrollPane();
 		contentPane.add(scrollPane);
-
+		
 		textArea = new JTextArea();
 		textArea.setFocusable(false);
 		textArea.setFont(new Font("굴림체", Font.BOLD, 20));
 		scrollPane.setViewportView(textArea);
-
+		
+		redButton.addActionListener(new ButtonEventHandle());
+		greenButton.addActionListener(new ButtonEventHandle());
+		blueButton.addActionListener(new ButtonEventHandle());
+		
 		JTextField textField = new JTextField();
 		textField.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String text = textField.getText();
-				if (!text.equals("")) {
-					textArea.append(text + "\n");
+				String text=textField.getText();
+				if(!text.equals("")) {
+					textArea.append(text+"\n");
 					textArea.setCaretPosition(textArea.getText().length());
 					textField.setText("");
 				}
 			}
 		});
-
+		
 		textField.setFont(new Font("굴림체", Font.BOLD, 20));
 		contentPane.add(textField, BorderLayout.SOUTH);
 		textField.setColumns(10);
 	}
+	
+	public class ButtonEventHandle implements ActionListener {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			JButton eventSource=(JButton)e.getSource();
+			
+			redButton.setEnabled(true);
+			greenButton.setEnabled(true);
+			blueButton.setEnabled(true);
+
+			eventSource.setEnabled(false);
+			
+			if(eventSource == redButton) {
+				textArea.setForeground(Color.RED);
+			} else if(eventSource == greenButton) {
+				textArea.setForeground(Color.GREEN);
+			} else if(eventSource == blueButton) {
+				textArea.setForeground(Color.BLUE);
+			}
+		}
+	}
 }
+
+
+

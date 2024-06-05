@@ -80,7 +80,7 @@ public class ChatingClientApp extends JFrame {
 		
 		try {
 			//Socket 객체를 생성하여 필드에 저장 - 서버 접속
-			socket=new Socket("192.168.13.16", 5000);
+			socket=new Socket("192.168.13.31", 5000);
 			
 			//소켓의 입력스트림을 사용해 대량의 문자데이타(문자열)를 전달받을 수 있는 입력스트림으로 확장
 			in=new BufferedReader(new InputStreamReader(socket.getInputStream()));
