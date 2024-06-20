@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS</title>
+<style type="text/css">
+
+
+div {
+	font-size : 20px;
+	line-height : 35px;
+	color : red;
+}
+div[title] {color:green;}
+
+div[title='choice'] {color:blue}
+
+</style>
+
+</head>
+<body>
+	<h1>선택자(Selector)</h1>
+	<hr>
+	<p>속성 선택자 - 태그의 속성과 속성값으로 엘리먼트를 선택하여 스타일 시</p>
+	<hr>
+	<div>브라우저에 출력될 아주 중요한 내용입니다.</div>
+	<div title="">브라우저에 출력될 아주 중요한 내용입니다.</div>
+	<div title="Choise">브라우저에 출력될 아주 중요한 내용입니다.</div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML</title>
+</head>
+<body>
+	<h1>input 태그</h1>
+	<hr>
+	<form action="#" method="post">
+		<input type="hidden" name="num" value="1000">
+		<p>아이디 : <input type="text" name="id" size="20" maxlength="20" autofocus required placeholder="아이디 입력"><p>
+		<p>비밀번호 : <input type="password" name="passwd" placeholder="비밀번호 입력"><p>
+		<p>이름 : <input type = "text" name="name" value="홍길동" readonly></p>
+		<p>성별 : <input type="radio" name="gender" value = "M" checked="checked">남자
+			<input type="radio" name="gender" value = "M">여자</p>
+		<p>취미 : <input type = "checkbox" name="hobby" value = "독서">독서 
+		 	<input type = "checkbox" name="hobby" value = "등산">등산  
+			<input type = "checkbox" name="hobby" value = "낚시">낚시
+			<input type = "checkbox" name="hobby" value = "게임">게임
+			<input type = "checkbox" name="hobby" value = "공부">공부</p>
+		<p>증명사진 : <input type = "file" name="photo"></p>
+		<p>이메일 : <input type = "email" name = "Email"></p>
+		<p>나이 : <input type = "number" name="age" min="0" max="200"></p>
+		<p>전화번호 : <input type="tel" name="phone"></p>
+		<p>SNS : <input type="url" name="sns"></p>
+		<p>좋아하는 단어: <input type="search" name="keyword"></p>
+		<p>좋아하는 색 : <input type = "color" name = "color"></p>
+		<p>Java 실력 : 하<input type="range" name = "grade" min="1" max="5">상</p>
+		<p>생년월일 : <input type = "date" name="birthday"></p>
+		<p>기상시간 : <input type = "time" name= "uptime"></p>
+		<p> 알람 : <input type = "datetime-local" name= "alram"></p>
+		
+		<!-- 제출 이벤트가 발생하는 태그 -->
+		<!-- <input type = "submit" value="회원가입"> -->
+		<button type = "submit">회원가입</button>
+		<button type = "reset">다시 입력</button>
+		
+		
+		
+	</form>
+</body>
+</html> 
