@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript</title>
+</head>
+<body>
+	<h1>자바스크립트 제어문</h1>
+	<hr>
+	<!-- 제어문 : 프로그램의 실행 흐름을 변환 시키기 위해 사용하는 명령(문장) -->
+	<p>선택문 - if, switch</p>
+	<p>반복문 - for, while</p>
+	<p>기타 - break, continue, return</p>
+	
+	<script type="text/javascript">
+	/*
+	//입력창으로 숫자값을 입력받아 숫자값에 대한 제곱근을 계산하여 출력하는 프로그램 작성
+	
+	//prompt(message[, value]) : 입력창을 생성해 값을 입력받아 문자값으로 반환하는 함수
+	var num=prompt("숫자값을 입력해 주세요.");
+	//alert("num 변수값 = "+num);//num 변수값 = 123
+	//alert("num 변수의 자료형 = "+typeof(num));//num 변수의 자료형 = string
+	
+	//isNaN(value) : 매개변수로 전달받은 값이 숫자값으로 형변환 가능하면 [false]를 반환하고
+	//숫자값으로 형변환 불가능하면 [true]를 반환하는 함수
+	if(isNaN(num)) {
+		alert("입력값이 숫자값이 아닙니다.");
+	} else {
+		alert(num * num);
+	}
+	*/
+	
+	//학생 성적에 대한 총점, 평균, 학점을 계산하여 출력하는 프로그램 작성
+	// => 학점 : 100 ~ 90 : A, 89 ~ 80 : B, 79 ~ 70 : C, 69 ~ 60 : D, 59 ~ 0 : F
+	var kor=98, eng=80, mat=91;
+	
+	var avg = parseInt((kor + eng + mat) / 3); 
+	var grade;
+	
+	
+	switch(parseInt(avg/10)) {
+	case 9:
+		grade = 'A'
+		break;
+	case 8:
+		grade = 'B'
+		break;
+	case 7:
+		grade = 'C'
+		break;
+	case 6:
+		grade = 'D'
+		break;
+	case 5:
+		grade = 'E'
+		break;
+	default:
+		grade = 'F' 
+	}
+	
+	alert(`성적의 총점은 ${kor + eng + mat} 입니다`)
+	alert(`평균 성적은 ${avg} 입니다`)
+	alert(`평균 학점은 ${grade} 입니다`)
+	
+	var tot = 0;
+	for(i=1;i<=100;i++) {
+		tot+=i;
+	}
+	
+	alert("1~100의 합계는 " + tot);
+	
+	var paper_tot = 1;
+	var count = 0;
+	
+	while (paper_tot <= 500) {
+
+	count++;
+	paper_tot*=2;
+	
+	}
+	
+	alert(count + "번 접으면 사각형의 모양이" + paper_tot +"개가 됩니다.");
+	
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
