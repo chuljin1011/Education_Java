@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+	<h1>태그의 이동</h1>
+	<hr>
+	<div id="imageList"></div>
+	
+	<script type="text/javascript">
+	for (var i = 0; i < 10; i++) {
+		$("#imageList").append("<img src='/web/jquery/images/"+i+".png' width='150'>");
+		
+		
+	}
+	
+	setInterval(function() {
+		$("#imageList").children(":eq(0)").appendTo("#imageList");		
+	}, 1000);
+	
+	
+	</script>
+
+</body>
+</html>

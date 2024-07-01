@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#displayDiv {
+	width: 600px;
+	margin: 0 auto;
+	padding: 30px 0;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	border: 2px solid black;
+}
+</style>
+</head>
+<body>
+
+	<h1>DOM</h1>
+	<hr>
+
+	<div id="displayDiv">2024년 6월 27일 14시 41분 22초</div>
+
+	<script type="text/javascript">
+		var displayDiv = document.getElementById("displayDiv")
+
+		var displayClock = function() {
+			var now = new Date();
+
+			var printNow = now.getFullYear() + "년 " + (now.getMonth() + 1)
+					+ "월 " + now.getDate() + "일 " + now.getHours() + "시 "
+					+ now.getMinutes() + "분 " + now.getSeconds() + "초";
+			
+			displayDiv.innerHTML=printNow;
+
+		}
+		
+		displayClock();
+		
+		setInterval(displayClock, 1000);
+		
+	</script>
+
+
+
+</body>
+</html>
