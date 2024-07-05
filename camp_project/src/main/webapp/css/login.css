@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.login_text {
+	width: 400px;
+	margin: auto;
+}
+
+.loginbox {
+	border: 1px solid black;
+	background: white;
+	width: 400px;
+	margin: auto;
+	
+.test {
+	border: 1px solid black;
+}
+.test1 {
+	border: 1px solid black;
+	margin: auto;
+
+	display: flex;
+	
+}
+
+	
+	
+}
