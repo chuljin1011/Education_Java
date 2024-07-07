@@ -31,14 +31,17 @@ address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
 .wrap_search .btn_search span{display:inline-block;width:28px;height:29px;font-size:0;line-height:0;text-indent:-9999px;background-image:url(../images/btn_top_search.png);}
 .wrap_menu{position:absolute;top:20px;right:0;}
 .list_menu{overflow:hidden;}
-.list_menu li{float:left;padding-left:18px;}
+.list_menu li{position:relative;float:left;padding-left:18px;}
 .list_menu .link_menu{display:block;text-align:center;}
 .list_menu .link_menu:hover{text-decoration:underline;}
 .list_menu .link_menu span{display:block;margin-top:6px;}
+.list_menu .link_menu .num_product{display:inline-block;position:absolute;top:0;right:0;margin:0;width:20px;height:20px;border-radius:50%;color:#fff;background-color:#34b592;line-height:20px;}
 
 .wrap_nav{border-top:1px solid #ccc;border-bottom:#ccc;box-sizing:border-box;}
+.wrap_nav.fix{position:fixed;top:0;left:0;width:100%;z-index:1000;box-shadow:1px 2px 4px #616161;background-color:rgba(255,255,255,.95);}
+.wrap_nav.fix .list_gnb li:hover{background-color:#f0f0f0;}
 .wrap_nav .inner_nav{width:1024px;height:54px;margin:0 auto;line-height:54px;}
-.wrap_nav .wrap_cate{float:left;}
+.wrap_nav .wrap_cate{float:left;cursor:pointer;}
 .wrap_nav .wrap_gnb{float:left;}
 .wrap_nav .wrap_board{float:right;}
 
@@ -49,7 +52,7 @@ address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
 .wrap_cate .list_cate{display:none;position:absolute;top:54px;left:-14px;z-index:1;width:200px;height:644px;background-color:#fff;box-shadow:2px 2px 4px #989898;}
 .list_cate li:hover > .link_cate{color:#55d2b0;font-weight:bold;}
 .list_cate li:hover .list_cate_sub{display:block;}
-.list_cate .list_cate_sub{display:none;overflow-y:auto;position:absolute;top:0;left:201px;width:200px;height:644px;background-color:#f1f1f1;box-shadow:2px 2px 4px #989898;}
+.list_cate .list_cate_sub{display:none;overflow-y:auto;position:absolute;top:0;left:200px;width:200px;height:644px;background-color:#f1f1f1;box-shadow:2px 2px 4px #989898;}
 .list_cate .link_cate{display:block;padding-left:15px;box-sizing:border-box;line-height:46px;}
 
 .wrap_gnb{padding-left:60px;}
@@ -65,37 +68,33 @@ address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
 .list_board .link_board{display:block;padding:0 20px;font-size:14px;}
 
 
-
-
-/* 메인 */
-.cont_article{height:1000px;background-color:#ccc;}
-.section_banner{height:500px;}
-
-
-
-
-
 /* 푸터 */
-.wrap_foot{border-top:1px solid #ccc;}
+.wrap_foot{border-top:1px solid #ccc;background-color:#fff}
 .wrap_foot .inner_foot{border-top:1px solid #ccc}
 .foot_quick{width:1024px;margin:0 auto;padding:15px 0;}
 .foot_quick .link_quick{position:relative;margin-right:14px;font-size:14px}
-.foot_quick .link_quick:hover{font-weight:bold;color:#000}
+.foot_quick .link_quick:hover{font-weight:bold;color:#55d2b0}
 .foot_quick .link_quick:after{position:absolute;top:0;right:-11px;width:1px;height:100%;background-color:#ccc;content:'';}
 .foot_quick .link_quick:last-child:after{display:none;}
 
-.foot_etc{overflow:hidden;width:1024px;margin:0 auto;padding:24px 0 30px;}
+.foot_etc{overflow:hidden;width:1024px;margin:0 auto;padding:34px 0;}
 .foot_etc h3{font-size:18px}
-.foot_etc>div{float:left;padding-right:40px;}
-.foot_etc strong{display:block;padding-top:10px;font-size:30px;}
+.foot_etc>div{float:left;padding-right:80px;}
+.foot_etc strong{display:block;padding-top:20px;font-size:26px;}
 .foot_etc span{display:block;font-size:14px;margin-top:6px;color:#666;}
 
 .foot_etc .etc_notice{position:relative;width:300px;padding:0;}
-.etc_notice .list_notice{padding-top:10px;}
+.etc_notice .list_notice{padding-top:4px;}
 .etc_notice .link_notice{display:block;overflow:hidden;text-overflow:ellipsis;font-size:14px;white-space:nowrap;}
+.etc_notice .link_notice:hover{text-decoration:underline;}
 .etc_notice .link_more{position:absolute;top:0;right:0;}
-.etc_notice .link_more:hover{font-weight:bold;}
+.etc_notice .link_more:hover{font-weight:bold;color:#55d2b0;}
+.list_notice li{padding-top:4px;}
 
 .foot_info{overflow:hidden;width:1024px;margin:0 auto;padding:20px 0;}
 .foot_info > div{float:left;}
+.foot_info .wrap_img{margin-top:12px;}
+.foot_info .wrap_policy{padding-left:60px;}
 
+.btn_top{display:none;position:fixed;bottom:80px;right:80px;width:50px;height:50px;border:1px solid #34b592;border-radius:50%;background-color:#fff;font-size:16px;font-weight:bold;color:#34b592}
+.btn_top:hover{background-color:#34b592;color:#fff;}
