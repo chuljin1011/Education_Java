@@ -8,7 +8,7 @@
 부모 브라우저의 아이디 입력태그에 입력값으로 아이디를 출력 후 브라우저 종료 --%>
 <%-- => 아이디 중복 : 아이디 사용 불가능 메세지를 출력하고 새로운 아이디를 입력받아 현재 
 실행중인 JSP 문서(id_check.jsp) 문서를 다시 요청 - 입력값(아이디) 전달 --%>    
-<%-- <%
+<%
 	//전달값을 반환받아 저장
 	String id=request.getParameter("id");
 
@@ -22,8 +22,7 @@
 	// => null 반환 : 회원정보 미검색 - 아이디 미중복(아이디 사용 가능)
 	// => MemberDTO 객체 반환 : 회원정보 검색 - 아이디 중복(아이디 사용 불가능)
 	MemberDTO member=MemberDAO.getDAO().selectMemberById(id);
-%> --%>
-<%@include file="/security/login_check.jspf" %>
+%>
 <!DOCTYPE html>
 <html>
 <head>
