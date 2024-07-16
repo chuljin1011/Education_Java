@@ -34,8 +34,11 @@
 		
 		<!-- 개인 CODE 시작  -->
 		
-		<!-- 로그인 페이지 테스ㅌ, -->
-		<%@include file="/client/login.jspf" %>
+		<!-- 로그인 페이지 테스트 -->
+		<%-- <%@include file="/client/login.jspf" %> --%>
+		
+		<!-- 로그인 페이지 테스트 -->
+		<%@include file="/client/join.jspf" %>
 		
 		<!-- 개인 CODE 종료  -->
 		

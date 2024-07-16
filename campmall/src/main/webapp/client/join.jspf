@@ -1,47 +1,94 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 
 <!-- 개별 CSS -->
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/css/login.css">
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/join.css">
 
-<div id="loginArea" class="loginArea">
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
-	<div id="loginText" class="loginText">
-		<p>로그인</p>
+<div id="join_termsArea" class="join_termsArea">
+
+	<div id="head_text" class="head_text">
+		<div id="head_text_left" class="head_text_left">
+			<p>회원가입</p>
+		</div>
+		<div id="head_text_right" class="head_text_right">
+			<p>
+				01 약관동의 &nbsp;▶&nbsp; <span id="current_stage"> 02 정보입력
+					&nbsp;▶</span> &nbsp;03 가입완료
+			</p>
+		</div>
 	</div>
+	<hr>
 	
-	<div id="loginArea_sub" class="loginArea_sub">
-		<div id="loginbox" class="loginbox">
-			<form action="login.html" method="post" id="loginform">
-				<div id="loginbox_top">
-					<p>회원 로그인</p>
-				</div>
-				<div id="loginbox_mid">
-				
-					<div id="loginbox_mid_1">
-						<ul>
-							<li></li>
-							<li><input type="text" name="id" id="id" placeholder="아이디"></li>
-							<li><input type="password" name="passwd" id="passwd"
-								placeholder="비밀번호"></li>
-							<li><input type="checkbox" name="id_save" id="id_save">
-								<label for="id_save">아이디 저장</label></li>
-						</ul>
-					</div>
-					
-					<div id="loginbox_mid_2">
-						<button type="button" id="submitBtn">로그인</button>
-					</div>
-					<hr>
-				</div>
-				
-				<div id="loginbox_bottom">
-					<button type="button" id="joinBtn">회원가입</button>
-					<button type="button" id="findIDBtn">아이디 찾기</button>
-					<button type="button" id="findPWBtn">비밀번호 찾기</button>
-				</div>
-			</form>
+	<!-- 메인 입력 -->
+	<div id="total_box">
+		<div id="info_text">
+			<div id="info_text_1">
+				<p>기본정보</p>
+			</div>
+			<div id="info_text_2">
+				<p>
+					<span id="red_point">■</span> &nbsp;표시는 반드시 입력해야 하는 항목 입니다.
+				</p>
+			</div>
+		</div>
+
+
+		<div id=insert_Frame>
+			<table>
+				<tr>
+					<th><span id="red_point">■</span> 아이디</th>
+					<td><input type="text" name="id" id="id"></td>
+				</tr>
+				<tr>
+					<th><span id="red_point">■</span> 비밀번호</th>
+					<td><input type="password" style="width: 160px"></td>
+				</tr>
+				<tr>
+					<th><span id="red_point">■</span> 비밀번호 확인</th>
+					<td><input type="password" style="width: 160px"></td>
+				</tr>
+				<tr>
+					<th><span id="red_point">■</span> 이름</th>
+					<td><input type="text"></td>
+				</tr>
+				<tr>
+					<th><span id="red_point">■</span> 이메일</th>
+					<td><input type="text" style="width: 230px"> <select>
+							<option selected>직접입력</option>
+							<option>naver.com</option>
+							<option>hanmail.net</option>
+							<option>daum.net</option>
+							<option>naver.com</option>
+							<option>nate.com</option>
+							<option>hotmail.com</option>
+							<option>gmail.com</option>
+					</select></td>
+				</tr>
+				<tr>
+					<th><span id="red_point">■</span> 휴대폰번호</th>
+					<td><input type="text" placeholder="- 없이 입력하세요."></td>
+				</tr>
+				<tr>
+					<th><span id="red_point">■</span> 주소</th>
+					<td>
+					<input type="text" id="zip_input1">
+					<button id="zip_btn">우편번호검색</button>
+					<input type="text" id="zip_input2" style="display: block">
+					<input type="text" id="zip_input3" style="display: block">
+					</td>
+				</tr>
+			</table>
+
+			<div id="btnDiv">
+				<button type="button" id="cancelBtn">취소</button>
+				<button type="button" id="completeBtn">회원가입</button>
+			</div>
 		</div>
 	</div>
 </div>
+
+<script src="<%=request.getContextPath()%>/js/join.js"></script>
+
 <!-- 개인 CODE 종료 -->
