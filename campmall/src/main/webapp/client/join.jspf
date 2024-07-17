@@ -93,9 +93,9 @@
 						<th><span id="red_point">■</span> 주소</th>
 						<td>
 						<input type="text" name="zipCode" id="zipCode" size="7" readonly="readonly">
-						<button id="zip_btn">우편번호검색</button>
+						<button type="button" id="zip_btn">우편번호검색</button>
 						<input type="text" name="address1" id="address1" size="50" readonly="readonly">
-						<input type="text" name="address2" id="address2" size="50" readonly="readonly">
+						<input type="text" name="address2" id="address2" size="50">
 							<div id="zipCodeMsg" class="error">우편번호를 입력해 주세요.</div>
 							<div id="address1Msg" class="error">기본주소를 입력해 주세요.</div>
 							<div id="address2Msg" class="error">상세주소를 입력해 주세요.</div>
@@ -124,9 +124,9 @@
 
 <script type="text/javascript">
 
+$("#name").val("abcdef");
 
-
-
+/* 
 $("#join").submit(function() {
 	var submitResult=true;
 	
@@ -156,6 +156,7 @@ $("#join").submit(function() {
 	
 };
 
+ */
 
 </script>
 

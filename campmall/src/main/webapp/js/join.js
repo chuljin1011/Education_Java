@@ -5,11 +5,12 @@ $("#id").focus();
 $("#zip_btn").click(function() {
 	new daum.Postcode({
 		oncomplete: function(data) {
-			$("#zip_input1").val(data.zonecode);
-			$("#zip_input2").val(data.address);
+			$("#zipCode").val(data.zonecode);
+			$("#address1").val(data.address);
 		}
 	}).open();
 });
+
 
 /* 입력 시 에러 검출 */
 var idReg=/^[a-zA-Z]\w{5,19}$/g;
