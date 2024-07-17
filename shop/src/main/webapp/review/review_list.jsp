@@ -204,7 +204,7 @@ td {
 					<% if(review.getReviewStatus() == 1) {//일반글인 경우 %>
 						<a href="<%=url%>"><%=review.getReviewSubject() %></a>
 					<% } else if(review.getReviewStatus() == 2) {//비밀글인 경우 %>
-						<span class="subject_hidden">
+						<span class="subject_hidden">비밀글</span>
 						<%--로그인 사용자가 게시글 작성자이거나 관리자인 경우 제목 출력 --%>
 						<% if(loginMember != null && (loginMember.getMemberNum() == 
 							review.getReviewMemberNum() || loginMember.getMemberAuth() == 9)) { %>
@@ -212,11 +212,10 @@ td {
 						<% } else { %>
 							게시글 작성자 또는 관리자만 확인 가능합니다.
 						<% } %>	
-						</span>
+						
 					<% } else if(review.getReviewStatus() == 0) {//삭제글인 경우 %>
-						<span class="subject_hidden">
+						<span class="subject_hidden">삭제글</span>
 							게시글 작성자 또는 관리자에 의해 삭제된 게시글입니다.
-						</span>
 					<% } %>
 				</td>
 				
@@ -272,10 +271,9 @@ td {
 	<div id="page_list">
 		<%-- 이전 블럭을 출력할 수 있는 링크 제공 --%>
 		<% if(startPage > blockSize) { %>
-			<a href="<%=myUrl%>&pageNum=<%=1%>">[처음으로]</a>
 			<a href="<%=myUrl%>&pageNum=<%=startPage-blockSize%>">[이전]</a>
 		<% } else { %>
-			[처음으로] [이전]
+			[이전]
 		<% } %>
 	
 		<% for(int i = startPage ; i <= endPage ; i++) { %>
@@ -290,9 +288,8 @@ td {
 		<%-- 다음 블럭을 출력할 수 있는 링크 제공 --%>
 		<% if(endPage != totalPage) { %>
 			<a href="<%=myUrl%>&pageNum=<%=startPage+blockSize%>">[다음]</a>
-			<a href="<%=myUrl%>&pageNum=<%=totalPage%>">[맨뒤로]</a>
 		<% } else { %>
-			[다음] [맨뒤로]
+			[다음]
 		<% } %>
 	</div>
 

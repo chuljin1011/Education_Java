@@ -17,7 +17,7 @@
 	//전달값을 반환받아 저장
 	int num=Integer.parseInt(request.getParameter("num"));
 	String passwd=request.getParameter("passwd");
-	if(passwd != null) {
+	if(passwd != null && !passwd.equals("")) {//전달값(비밀번호)이 있는 경우
 		passwd=Utility.encrypt(passwd);
 	}
 	String name=request.getParameter("name");
@@ -42,7 +42,7 @@
 	//반환하는 MemberDAO 클래스의 메소드 호출
 	MemberDAO.getDAO().updateMember(member);
 	
-	if(passwd != null) {//전달값(비밀번호)이 있는 경우
+	if(passwd != null && !passwd.equals("")) {//전달값(비밀번호)이 있는 경우
 		//회원정보(MemberDTO 객체)를 전달받아 MEMBER 테이블에 저장된 행의 비밀번호를 변경하고 
 		//변경행의 갯수를 반환하는 MemberDAO 클래스의 메소드 호출
 		MemberDAO.getDAO().updatePassword(member);
@@ -57,10 +57,3 @@
 	// => 요청 JSP 문서(index.jsp)에서 URL 주소를 반환받아 리다이렉트 이동 
 	request.setAttribute("returnUrl", request.getContextPath()+"/index.jsp?workgroup=member&work=member_mypage");
 %>
-
-
-
-
-
-
-

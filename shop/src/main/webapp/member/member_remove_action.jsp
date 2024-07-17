@@ -39,3 +39,4 @@ MEMBER 테이블에 저장된 행의 권한을 변경하고 [/member/member_logo
 
 
 
+

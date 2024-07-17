@@ -8,7 +8,7 @@
 	for(int i=1;i<=500;i++) {
 		int nextNum=ReviewDAO.getDAO().selectReviewNextNum();
 		review.setReviewNum(nextNum);//글번호 변경
-		review.setReviewMemberNum(2);//회원번호(작성자) 변경
+		review.setReviewMemberNum(1);//회원번호(작성자) 변경
 		review.setReviewSubject("테스트-"+i);//제목 변경
 		review.setReviewContent("게시글 테스트-"+i);//내용 변경
 		review.setReviewIp("192.168.13.31");//IP 주소 변경
