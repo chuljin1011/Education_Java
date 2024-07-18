@@ -22,7 +22,6 @@ $("#id").blur(function() {
 	
 	if($("#id").val()=="") {
 		$("#idMsg").css("display","block");
-		$("#id").val();
 
 	} else if(!idReg.test($("#id").val())) {
 		$("#idRegMsg").css("display","block");

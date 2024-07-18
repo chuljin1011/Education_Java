@@ -68,8 +68,9 @@
 					</tr>
 					<tr>
 						<th><span id="red_point">■</span> 이메일</th>
-						<td><input type="text" name="email" id="email" style="width: 230px"> <select>
-							<option selected>직접입력</option>
+						<td><input type="text" name="email" id="email" style="width: 230px"> 
+						<select id="domainSel" name="domainSel">
+							<option id="emailSelf" selected>직접입력</option>
 							<option>naver.com</option>
 							<option>hanmail.net</option>
 							<option>daum.net</option>
@@ -126,13 +127,12 @@
 
 $("#name").val("abcdef");
 
-/* 
 $("#join").submit(function() {
 	var submitResult=true;
 	
 	$(".error").css("display", "none");
 	
-	var idReg=/^[a-zA-Z]\w{5,19}$/g;
+	/* ID 검증 */
 	if($("#id").val()=="") {
 		$("#idMsg").css("display","block");
 		submitResult=false;
@@ -144,7 +144,7 @@ $("#join").submit(function() {
 		submitResult=false;
 	}
 	
-	var passwdReg=/^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[~!@#$%^&*_-]).{6,20}$/g;
+	/* PW 검증 */
 	if($("#passwd").val()=="") {
 		$("#passwdMsg").css("display","block");
 		submitResult=false;
@@ -153,10 +153,40 @@ $("#join").submit(function() {
 		submitResult=false;
 	} 
 	
-	
-};
+	/* PW확인 검증 */
+	if($("#repasswd").val()=="") {
+		$("#repasswdMsg").css("display","block");
 
- */
+	} else if($("#passwd").val()!=$("#repasswd").val()) {
+		$("#repasswdMatchMsg").css("display","block");
+	}
+	
+	/* Email 검증 */
+	if($("#email").val()=="") {
+		$("#emailMsg").css("display","block");
+	}
+	
+	if
+	
+	
+	/* 주소 검증 */
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
 
 </script>
 
