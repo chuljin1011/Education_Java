@@ -70,7 +70,7 @@
 						<th><span id="red_point">■</span> 이메일</th>
 						<td><input type="text" name="email" id="email" style="width: 230px"> 
 						<select id="domainSel" name="domainSel">
-							<option id="emailSelf" selected>직접입력</option>
+							<option id="domainSelf" selected>직접입력</option>
 							<option>naver.com</option>
 							<option>hanmail.net</option>
 							<option>daum.net</option>
@@ -106,7 +106,7 @@
 	
 				<div id="btnDiv">
 					<button type="button" id="cancelBtn">취소</button>
-					<button type="button" id="completeBtn">회원가입</button>
+					<button type="submit" id="completeBtn">회원가입</button>
 				</div>
 			</div>
 		</form>
@@ -125,7 +125,6 @@
 
 <script type="text/javascript">
 
-$("#name").val("abcdef");
 
 $("#join").submit(function() {
 	var submitResult=true;
@@ -156,31 +155,26 @@ $("#join").submit(function() {
 	/* PW확인 검증 */
 	if($("#repasswd").val()=="") {
 		$("#repasswdMsg").css("display","block");
-
+		submitResult=false;
 	} else if($("#passwd").val()!=$("#repasswd").val()) {
 		$("#repasswdMatchMsg").css("display","block");
+		submitResult=false;
 	}
 	
 	/* Email 검증 */
 	if($("#email").val()=="") {
 		$("#emailMsg").css("display","block");
+		submitResult=false;
 	}
 	
-	if
+	$("#domainSel").is("#domainSelf")) {
+		/* $("#emailRegMsg").css("display","block"); */
+	}
 	
+}
+
 	
 	/* 주소 검증 */
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
