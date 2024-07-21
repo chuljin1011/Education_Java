@@ -2,7 +2,7 @@
 
 #join_termsArea {
 	/* background: silver; */
-	height: 900px;
+	height: 950px;
 	width: 1000px;
 	margin: 10px auto;
 	position: relative;
@@ -142,16 +142,12 @@ td select {
 
 
 
-#zipCode, #address1 {
-	margin-bottom: 10px;
+#address1, #address2 {
+	margin-top: 10px;
 }
 
-#address1, address1 {
-	display: block;
-}
-
-#zipCode{
-	width: 200px;
+#zipcode {
+	width: 200px;	
 }
 
 #zip_btn {
@@ -159,7 +155,6 @@ td select {
 	display: inline;
 	margin: 0;
 	height: 28px;
-	margin-bottom: 10px;
 	margin-left: 5px;
 	width: 90px;
 }
@@ -199,5 +194,10 @@ td select {
 
 .error{
 	color: red;
+	display: none;	
+}
+
+.pass {
+	color: green;	
 	display: none;	
 }

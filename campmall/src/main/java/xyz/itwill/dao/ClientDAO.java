@@ -62,7 +62,7 @@ public class ClientDAO extends JdbcDAO {
 
 			String sql = "select client_num,client_id,client_passwd,client_name,client_email"
 					+ ",client_mobile,client_zipcode,client_address1,client_address2"
-					+ ",client_register_date,client_update_date,client_last_login,client_auth"
+					+ ",client_register_date,client_update_date,client_last_login,client_status"
 					+ " from client where client_id=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, id);
@@ -83,7 +83,50 @@ public class ClientDAO extends JdbcDAO {
 				client.setClientRegisterDate(rs.getString("client_register_date"));
 				client.setClientUpdateDate(rs.getString("client_update_date"));
 				client.setClientLastLogin(rs.getString("client_last_login"));
-				client.setClientStatus(rs.getInt("client_auth"));
+				client.setClientStatus(rs.getInt("client_status"));
+			}
+		} catch (SQLException e) {
+			System.out.println("[에러]selectClientById() 메서드의 SQL 오류 = " + e.getMessage());
+		} finally {
+			close(con, pstmt, rs);
+		}
+		return client;
+	}
+	
+	// 이메일(String 객체)를 전달받아 CLIENT 테이블에 저장된 하나의 행을 검색하여 검색된
+	// 회원정보(ClientDTO)를 반환하는 메소드
+	public ClientDTO selectClientByEmail(String email) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		ClientDTO client = null;
+		try {
+			con = getConnection();
+			
+			String sql = "select client_num,client_id,client_passwd,client_name,client_email"
+					+ ",client_mobile,client_zipcode,client_address1,client_address2"
+					+ ",client_register_date,client_update_date,client_last_login,client_status"
+					+ " from client where client_email=?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, email);
+			
+			rs = pstmt.executeQuery();
+			
+			if (rs.next()) {
+				client = new ClientDTO();
+				client.setClientNum(rs.getInt("client_num"));
+				client.setClientId(rs.getString("client_id"));
+				client.setClientPasswd(rs.getString("client_passwd"));
+				client.setClientName(rs.getString("client_name"));
+				client.setClientEmail(rs.getString("client_email"));
+				client.setClientMobile(rs.getString("client_mobile"));
+				client.setClientZipcode(rs.getString("client_zipcode"));
+				client.setClientAddress1(rs.getString("client_address1"));
+				client.setClientAddress2(rs.getString("client_address2"));
+				client.setClientRegisterDate(rs.getString("client_register_date"));
+				client.setClientUpdateDate(rs.getString("client_update_date"));
+				client.setClientLastLogin(rs.getString("client_last_login"));
+				client.setClientStatus(rs.getInt("client_status"));
 			}
 		} catch (SQLException e) {
 			System.out.println("[에러]selectClientById() 메서드의 SQL 오류 = " + e.getMessage());
@@ -105,7 +148,7 @@ public class ClientDAO extends JdbcDAO {
 
 			String sql = "select client_num,client_id,client_passwd,client_name,client_email"
 					+ ",client_mobile,client_zipcode,client_address1,client_address2"
-					+ ",client_register_date,client_update_date,client_last_login,client_auth"
+					+ ",client_register_date,client_update_date,client_last_login,client_status"
 					+ " from client where client_num=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, num);
@@ -126,7 +169,7 @@ public class ClientDAO extends JdbcDAO {
 				client.setClientRegisterDate(rs.getString("client_register_date"));
 				client.setClientUpdateDate(rs.getString("client_update_date"));
 				client.setClientLastLogin(rs.getString("client_last_login"));
-				client.setClientStatus(rs.getInt("client_auth"));
+				client.setClientStatus(rs.getInt("client_status"));
 			}
 		} catch (SQLException e) {
 			System.out.println("[에러]selectClientByNum() 메서드의 SQL 오류 = " + e.getMessage());
@@ -219,7 +262,7 @@ public class ClientDAO extends JdbcDAO {
 		try {
 			con = getConnection();
 
-			String sql = "update client set client_auth=? where client_num=?";
+			String sql = "update client set client_status=? where client_num=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, client.getClientStatus());
 			pstmt.setInt(2, client.getClientNum());

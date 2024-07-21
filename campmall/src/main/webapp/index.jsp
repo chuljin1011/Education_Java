@@ -1,6 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
+<%
+	request.setCharacterEncoding("utf-8");
+
+	//페이지 몸체부에 포함될 JSP 문서의 작업 폴더명을 반환받아 저장
+	String workgroup=request.getParameter("workgroup");
+	if(workgroup == null) {
+		workgroup="client";
+	}
+
+	//페이지 몸체부에 포함될 JSP 문서의 파일명을 반환받아 저장
+	String work=request.getParameter("work");
+	if(work == null) {
+		work="client_login";
+	}
+	
+	String contentPath=workgroup+"/"+work+".jsp";
+	
+
+%> 
     
 <!DOCTYPE html>
 <html lang="ko">
@@ -37,8 +56,15 @@
 		<!-- 로그인 페이지 테스트 -->
 		<%-- <%@include file="/client/login.jspf" %> --%>
 		
-		<!-- 로그인 페이지 테스트 -->
-		<%@include file="/client/join.jspf" %>
+		<!-- 회원가입 페이지 테스트 -->
+		<jsp:include page="<%=contentPath %>"/>		
+		<%
+			String returnUrl=(String)request.getAttribute("returnUrl");
+			if(returnUrl != null) {
+				response.sendRedirect(returnUrl);
+				return;
+			}
+		%>
 		
 		<!-- 개인 CODE 종료  -->
 		
