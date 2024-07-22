@@ -405,8 +405,9 @@
 <script type="text/javascript">
 
 $("#previousBtn").click(function() {
-	window.location.href = "<%=request.getContextPath()%>/index.jsp?workgroup=client&work=client_login";
+	history.back(); // 이전페이지
 });
+
 
 
 </script>

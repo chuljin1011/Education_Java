@@ -1,70 +1,83 @@
 @charset "UTF-8";
 
-#findIDArea {
+#findPWArea {
 	background: white;
 	height: 600px;
 	width: 600px;
 	margin: 50px auto;
 }
 
-.findIDText p{
+.findPWText p{
 	font-size: 20px;
 	font-weight: bold;
 	text-align: left;
 	margin-bottom: 10px;
 }
 
-.findIDArea_sub {
+.findPWArea_sub {
 	border: 1px solid #ddd;
 	padding: 60px;
 }
 
-.findIDArea_sub p {
+.findPWArea_sub p {
 	font-size: 18px;
 	font-weight: bold;
 	text-align: left;
 }
 
-.findIDbox p {
+.findPWbox p {
 	margin: 0 0 10px 0;
 }
 
-#findIDbox_top {
+#findPWbox_top {
 	margin-bottom: 15px;
 }
 
-#findIDbox_top p {
+#findPWbox_top p {
 	font-size: 16px;
 	font-weight: bold;
 }
 
-#findIDbox_mid {
+#findPWbox_mid {
 	margin-bottom: 20px;
 	display: flex;
 }
 
-#findIDbox_mid_1 {
+#findPWbox_mid_hidden {
+	margin-bottom: 20px;
+	display: flex;
+}
+
+#findPWbox_mid_1, #findPWbox_mid_3 {
 	width: 70%;
 	margin: 0px;
 }
-#findIDbox_mid_2 {
+#findPWbox_mid_2, #findPWbox_mid_4 {
 	width: 30%;
 	margin: 0px;
 	padding: 10px 0;
 }
 
-#findIDbox_mid_1 ul {
+#findPWbox_mid_1 ul, #findPWbox_mid_3 ul {
 	width: 100%;
 	list-style-type: none;
 	padding: 0;
 }
 
-#findIDbox_mid_1 ul li {
+#findPWbox_mid_1 ul li, #findPWbox_mid_3 ul li {
 	margin-bottom: 10px;
 	
 }
 
-#findIDbox_mid_1 input {
+#findPWbox_mid_1 input {
+	width: 95%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+#findPWbox_mid_3 input {
 	width: 95%;
 	padding: 8px;
 	border: 1px solid #ccc;
@@ -73,7 +86,7 @@
 }
 
 
-#findBtn {
+.findBtn {
 	width: 100%;
 	padding: 10px;
 	background-color: #333;
@@ -87,7 +100,7 @@
 }
 
 
-#findIDbox_bottom {
+#findPWbox_bottom {
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -110,7 +123,7 @@
 	
 }
 
-#findPWBtn {
+#findIDBtn {
 	background-color: white;
 	color: black;
 	border: 1px solid #d1d1d1;
@@ -145,3 +158,14 @@
 .inputbar {
 	margin-bottom: 5px
 }
+
+.newpasswdText {
+	margin-bottom: 5px;
+	font-size: 14px;
+}
+
+#updateBtn {
+    margin-top: 20px;
+    height: 90px;
+} 
+

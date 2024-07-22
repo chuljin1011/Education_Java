@@ -11,49 +11,42 @@
 		<p>아이디 찾기</p>
 	</div>
 	<div id="findIDArea_sub" class="findIDArea_sub">
-		<div id="findIDbox" class="findIDbox">
-			<!-- <form action="findID.html" method="post" id="findIDform"> -->
-				<div id="findIDbox_top">
-					<p>회원아이디 찾기</p>
+		<div id="findIDbox" class="findIDbox">	
+			<div id="findIDbox_top">
+				<p>회원아이디 찾기</p>
+			</div>
+			<div id="findIDbox_mid">
+				<div id="findIDbox_mid_1">
+					<ul>
+						<li></li>
+						<li><input type="text" name="name" id="name" placeholder="이름" class="inputbar"></li>
+						<li><input type="text" name="email" id="email" placeholder="가입메일주소" style="width: 55%"> 
+							<select id="domainSel" name="domainSel">
+								<option id="domainSelf" selected>직접입력</option>
+								<option>naver.com</option>
+								<option>hanmail.net</option>
+								<option>daum.net</option>
+								<option>naver.com</option>
+								<option>nate.com</option>
+								<option>hotmail.com</option>
+								<option>gmail.com</option>
+							</select>
+						</li>
+					</ul>
 				</div>
-				<div id="findIDbox_mid">
-					<div id="findIDbox_mid_1">
-						<ul>
-							<li></li>
-							<li><input type="text" name="name" id="name" placeholder="이름" style="margin-bottom: 5px"></li>
-							<li><input type="text" name="email" id="email" placeholder="가입메일주소" style="width: 55%"> 
-								<select id="domainSel" name="domainSel">
-									<option id="domainSelf" selected>직접입력</option>
-									<option>naver.com</option>
-									<option>hanmail.net</option>
-									<option>daum.net</option>
-									<option>naver.com</option>
-									<option>nate.com</option>
-									<option>hotmail.com</option>
-									<option>gmail.com</option>
-								</select>
-							</li>
-						</ul>
-					</div>
-					<div id="findIDbox_mid_2">
-						<button type="button" id="findBtn">아이디 찾기</button>
-					</div>
-					<br>
+				<div id="findIDbox_mid_2">
+					<button type="button" id="findBtn">아이디 찾기</button>
 				</div>
-				<hr>
-				<div id="btnDiv">
-					<button type="button" id="findPWBtn">비밀번호 찾기</button>
-					<button type="button" id="loginBtn">로그인하기</button>
-				</div>
-				<div id="result"><!--홍길동님의 아이디는 [abc123]입니다. --></div>
-
-			<!-- </form> -->
+				<br>
+			</div>
+			<hr>
+			<div id="btnDiv">
+				<button type="button" id="findPWBtn">비밀번호 찾기</button>
+				<button type="button" id="loginBtn">로그인하기</button>
+			</div>
+			<div id="result"><!--홍길동님의 아이디는 [abc123]입니다. --></div>
 		</div>
-
 	</div>
-
-
-
 </div>
 
 
@@ -66,6 +59,7 @@ $("#loginBtn").click(function() {
 $("#findPWBtn").click(function() {
 	window.location.href = "<%=request.getContextPath()%>/index.jsp?workgroup=client&work=client_find_PW";
 });
+
 
 // 아이디 찾기
 $("#findBtn").click(function() {
