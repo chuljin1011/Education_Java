@@ -18,33 +18,44 @@
 	String name=request.getParameter("name");
 	String email=request.getParameter("email");
 	
-	//이름과 이메일을 전달받아 AJAX_MEMBER 테이블에 저장된 행의 아이디를 검색하여 문자열로 
-	//반환하는 AjaxMemberDAO 클래스의 메소드 호출
-	//String id=AjaxMemberDAO.getDAO().selectAjaxMemberId(name, email);
-	
-	//회원정보(AjaxMemberDTO 객체)를 전달받아 AJAX_MEMBER 테이블에 저장된 행의 아이디를 검색하여 
-	//문자열로 반환하는 AjaxMemberDAO 클래스의 메소드 호출
-	
-	if(find == "id") {
-		
-	ClientDTO client=new ClientDTO();
-	client.setName(name);
-	client.setEmail(email);
-	//String id=ClientDAO.getDAO().selectClientByEmail(email);
-	ClientDAO.getDAO().selectClientByEmail(email);
-	String idfound = client.getClientId();
-	String nameCheck = client.getClientName();
-	
-	if(idfound == )
-	
-	}{
+	ClientDTO client = ClientDAO.getDAO().selectClientByEmail(email);
 %>
+
 <result>
-	<% if(id != null) {//검색된 아이디가 있는 경우 %>
-	<code>success</code>
-	<id><%=id%></id>
-	<% } else {//검색된 아이디가 없는 경우 %>
-	<code>empty</code>	
-	<% } %>	
-	}
+
+<%	if(find.equals("id")) { //아이디 찾기로 실행 된 경우 %>
+		
+<%	if(client == null) { //입력 이메일이 존재하지 않는경우 %>
+		<message>가입되지 않은 이메일입니다.</message>
+<%		} else { %>
+	
+<%			String findid = client.getClientId();
+			String nameCheck = client.getClientName();
+			int status = client.getClientStatus();
+	
+			if(status == 0) { //탈퇴한 회원의 경우 %>
+			<message>삭제되었거나 이용이 정지 된 ID 입니다.</message>
+			
+<%			} else if(nameCheck.equals(name)) {	//이름 매칭으로 본인검증 %>
+			<message><%=name%> 님의 ID는 [ <%=findid%> ] 입니다.</message>
+			
+<%			} else { //이메일과 사용자 이름이 일치하지 않는 경우 %>
+			<message>입력하신 정보가 올바르지 않습니다.</message>
+<%			}
+			
+		}
+
+} /* else if(find == "pw") {
+		
+		
+
+	
+	} */
+
+%>
+
+
+
+
+
 </result>
