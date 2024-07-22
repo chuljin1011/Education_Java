@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <%@page import="xyz.itwill.dto.ClientDTO"%>
 <%@page import="xyz.itwill.dao.ClientDAO"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/xml; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
 	ClientDTO client = null;

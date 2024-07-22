@@ -45,7 +45,7 @@
 					<button type="button" id="findPWBtn">비밀번호 찾기</button>
 					<button type="button" id="loginBtn">로그인하기</button>
 				</div>
-
+				<div id="result">홍길동님의 아이디는 [abc123]입니다.</div>
 
 			</form>
 		</div>
@@ -93,8 +93,8 @@ function findByEmail() {
 	
 	$.ajax({
 		type: "get",
-		url: "<%=request.getContextPath()%>/client/client_dup_check.jsp",
-		data: "email="+email+"&name="+name,
+		url: "<%=request.getContextPath()%>/client/client_dup_find_ajax.jsp",
+		data: {"name":name, "email":email, "find":"id"},
 		dataType: "xml",
 		success: function(xmlDoc) {
 			var code=$(xmlDoc).find("code").text();
