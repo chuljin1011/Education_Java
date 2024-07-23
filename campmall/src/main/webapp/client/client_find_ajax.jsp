@@ -53,16 +53,17 @@
 			<message>가입되지 않은 아이디입니다.</message>
 <%		} else { %>
 	
-<%			String findid = client.getClientId();
-			String nameCheck = client.getClientName();
+<%			String nameCheck = client.getClientName();
 			String emailCheck = client.getClientEmail();
 			int status = client.getClientStatus();
+			int clientNum = client.getClientNum();
 	
 			if(status == 0) { //탈퇴한 회원의 경우 %>
 				<message>삭제되었거나 이용이 정지 된 ID 입니다.</message>
 			
 <%			} else if(nameCheck.equals(name) && emailCheck.equals(email)) {	//이름, 아이디 매칭으로 본인검증 %>
 				<message>complete</message>
+				<code><%=clientNum%></code>
 			
 <%			} else { //이메일과 사용자 이름이 일치하지 않는 경우 %>
 				<message>입력하신 정보가 올바르지 않습니다.</message>

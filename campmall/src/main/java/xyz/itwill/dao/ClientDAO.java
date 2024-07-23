@@ -230,7 +230,7 @@ public class ClientDAO extends JdbcDAO {
 		return rows;
 	}
 
-	// 회원정보(ClientDTO 객체)를 전달받아 CLIENT 테이블에 저장된 행의 비빌번호를 변경하고
+	// 회원정보(ClientDTO 객체)를 전달받아 비밀번호 및 회원정보를 변경한 날짜를 업데이트 후
 	// 변경행의 갯수를 반환하는 메소드
 	public int updatePassword(ClientDTO client) {
 		Connection con = null;
@@ -239,7 +239,7 @@ public class ClientDAO extends JdbcDAO {
 		try {
 			con = getConnection();
 
-			String sql = "update client set client_passwd=? where client_num=?";
+			String sql = "update client set client_passwd=?, client_update_date=sysdate where client_num=?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, client.getClientPasswd());
 			pstmt.setInt(2, client.getClientNum());

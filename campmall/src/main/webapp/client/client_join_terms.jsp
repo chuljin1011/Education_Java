@@ -30,17 +30,19 @@
 		</div>
 		<div id="check_Terms_1">
 			<ul>
-				<li><input type="checkbox" name="checkli_first"
-					id="checkli_first"> <label for="checkli_first">(필수)
-						만14세 이상입니다.</label></li>
-				<li><input type="checkbox" name="checkli_allCheck"
-					id="checkli_allCheck"> <label for="checkli_allCheck">초캠몰의
-						모든 약관을 확인하고 전체 동의합니다. </label></li>
-				<li><input type="checkbox" name="checkli_1" id="checkli_1">
-					<label for="checkli_1">(필수) <span class="no_bold">이용약관</span>
-				</label></li>
-				<li><textarea id="terms_Area1" class="terms_Area"
-						readonly="readonly">
+				<li>
+					<input type="checkbox" name="checkAge" id="checkAge">
+					<label for="checkAge">(필수) 만14세 이상입니다.</label>
+				</li>
+				<li>
+					<input type="checkbox" name="checkAll" id="checkAll">
+					<label for="checkAll">초캠몰의 모든 약관을 확인하고 전체 동의합니다. </label>
+				</li>
+				<li>
+					<input type="checkbox" name="check1" id="check1" class="checklist">
+					<label for="check1">(필수) <span class="no_bold">이용약관</span></label>
+				</li>
+				<li><textarea id="terms_Area1" class="terms_Area" readonly="readonly">
 					
 제1조(목적)
 
@@ -260,12 +262,11 @@
 
 1. 이 약관은 2023년 1월 1일부터 적용됩니다.
 					</textarea></li>
-				<li><input type="checkbox" name="checkli_2" id="checkli_2">
-					<label for="checkli_2">(필수) <span class="no_bold">개인정보
-							수집 및 이용</span>
-				</label></li>
-				<li><textarea id="terms_Area2" class="terms_Area"
-						readonly="readonly">
+				<li>
+					<input type="checkbox" name="check2" id="check2" class="checklist">
+					<label for="check2">(필수) <span class="no_bold">개인정보 수집 및 이용</span></label>
+				</li>
+				<li><textarea id="terms_Area2" class="terms_Area" readonly="readonly">
 
 회사는 회원가입, 민원 등 고객상담 처리, 본인확인(14세 미만 아동 확인) 등 의사소통을 위한 정보 활용 및 이벤트 등과 같은 마케팅용도 활용, 회원의 서비스 이용에 대한 통계, 이용자들의 개인정보를 통한 서비스 개발을 위해 아래와 같은 개인정보를 수집하고 있습니다.
 
@@ -284,19 +285,21 @@
 
 이용자의 개인정보는 원칙적으로 개인정보의 수집 및 이용 목적 달성 시 지체없이 파기합니다. 다만 다른 법령에서 별도의 기간을 정하고 있는 경우나 이용자의 요청에 따라 기간을 달리 정한 경우에는 그 기간이 경과한 후 파기 등의 필요한 조치를 취합니다.
 						</textarea></li>
-				<li><input type="checkbox" name="checkli_3" id="checkli_3">
-					<label for="checkli_3">(선택) <span class="no_bold">개인정보
-							수집 및 이용</span>
-				</label></li>
+				<li>
+					<input type="checkbox" name="check3" id="check3" class="checklist">
+					<label for="check3">(필수) <span class="no_bold">개인정보 수집 및 이용</span></label>
+				</li>
 				<li>
 					<table>
 						<tr>
-							<th>선택</th>
+							<th>필수</th>
 							<th>주문/결제 및 배송서비스</th>
 						</tr>
 						<tr>
-							<td><input type="checkbox" name="checkli_4" id="checkli_4">
-								<label for="checkli_4"><span class="no_bold">선택</span></label></td>
+							<td>
+								<input type="checkbox" name="check3-1" id="check3-1" class="checklist">
+								<label for="check3-1"><span class="no_bold">필수</span></label>
+							</td>
 							<td><pre>
 초캠몰은 위탁판매업자로서 고객님이 주문하신 상품은 주식회사 캠핑퍼스트 혹은 위탁판매 공급사에서 발송됩니다.
 주식회사 캠핑퍼스트는 고객님 상품 주문 시 구매 및 대금결제와 물품배송 또는 청구지 발송, 불만 처리 등을 원활하게 진행하기 위해 아래와 같은 개인정보를 수집하고, 공급사에 해당 개인정보를 전달하고 있습니다.
@@ -313,19 +316,19 @@
 
 
 				<br>
-				<li><input type="checkbox" name="checkli_3" id="checkli_3">
-					<label for="checkli_3">(선택) <span class="no_bold">개인정보
+				<li><input type="checkbox" name="check4" id="check4" class="checklist">
+					<label for="check4">(필수) <span class="no_bold">개인정보
 							처리위탁</span>
 				</label></li>
 				<li>
 					<table>
 						<tr>
-							<th>선택</th>
+							<th>필수</th>
 							<th>고객 클레임 처리를 위한 CS 위탁</th>
 						</tr>
 						<tr>
-							<td><input type="checkbox" name="checkli_4" id="checkli_4">
-								<label for="checkli_4"><span class="no_bold">선택</span></label></td>
+							<td><input type="checkbox" name="check4-1" id="check4-1" class="checklist">
+								<label for="check4-1"><span class="no_bold">필수</span></label></td>
 							<td><pre>
 회사는 보다 나은 서비스 제공 및 이용자의 민원 등 고객상담 처리에 대해 원활한 업무 수행을 위해 아래와 같이 당사에서 수집하여 운영하고 있습니다.
 
@@ -339,19 +342,19 @@
 				</li>
 
 				<br>
-				<li><input type="checkbox" name="checkli_5" id="checkli_5">
-					<label for="checkli_5">(선택) <span class="no_bold">개인정보
+				<li><input type="checkbox" name="check5" id="check5" class="checklist">
+					<label for="check5">(필수) <span class="no_bold">개인정보
 							제 3자 제공</span>
 				</label></li>
 				<li>
 					<table>
 						<tr>
-							<th>선택</th>
+							<th>필수</th>
 							<th>마케팅 활용을 위한 개인정보 제3자 제공 동의</th>
 						</tr>
 						<tr>
-							<td><input type="checkbox" name="checkli_6" id="checkli_6">
-								<label for="checkli_6"><span class="no_bold">선택</span></label></td>
+							<td><input type="checkbox" name="check5-1" id="check5-1" class="checklist">
+								<label for="check5-1"><span class="no_bold">필수</span></label></td>
 							<td><pre>
 회사는 보다 나은 서비스 제공 및 및 이벤트 등과 같은 마케팅용도 활용에 대해 원활한 업무 수행을 위해 아래와 같이 외부 전문업체에 위탁하여 운영하고 있습니다.
 
@@ -364,12 +367,12 @@
 							</td>
 						</tr>
 						<tr>
-							<th>선택</th>
+							<th>필수</th>
 							<th>공급사 상품 판매 및 배송을 위한 개인정보 제3자 제공 동의</th>
 						</tr>
 						<tr>
-							<td><input type="checkbox" name="checkli_7" id="checkli_7">
-								<label for="checkli_7"><span class="no_bold">선택</span></label></td>
+							<td><input type="checkbox" name="check5-2" id="check5-2" class="checklist">
+								<label for="check5-2"><span class="no_bold">필수</span></label></td>
 							<td><pre>
 초캠몰은 위탁판매업자로서 고객님이 주문하신 상품은 주식회사 캠핑퍼스트 혹은 위탁판매 공급사에서 발송됩니다.
 주식회사 캠핑퍼스트는 고객님 상품 주문 시 구매 및 대금결제와 물품배송 또는 청구지 발송, 불만 처리 등을 원활하게 진행하기 위해 아래와 같은 개인정보를 수집하고, 공급사에 해당 개인정보를 전달하고 있습니다.
@@ -386,15 +389,11 @@
 						<button type="button" id="previousBtn">이전으로</button>
 						<button type="button" id="nextBtn">다음단계</button>
 					</div>
+					<div id="result">※ 필수 이용약관을 모두 동의해 주세요.</div>
 				</li>
-
-
-
 			</ul>
-
 		</div>
 	</div>
-
 
 </div>
 
@@ -409,6 +408,117 @@ $("#previousBtn").click(function() {
 });
 
 
+$("#checkAll").change(function() {
+	if($(this).is(":checked")) {
+        // 체크박스가 체크된 경우
+		$(".checklist").prop("checked", true);
+    } else {
+        // 체크박스가 체크 해제된 경우
+    	$(".checklist").prop("checked", false);
+    }
+});
+
+
+$("#check3, #check3-1").change(function() {
+	if($(this).is(":checked")) {
+        // 체크박스가 체크된 경우
+		$("#check3, #check3-1").prop("checked", true);
+    } else {
+        // 체크박스가 체크 해제된 경우
+    	$("#check3, #check3-1").prop("checked", false);
+    }
+});
+
+$("#check4, #check4-1").change(function() {
+	if($(this).is(":checked")) {
+        // 체크박스가 체크된 경우
+		$("#check4, #check4-1").prop("checked", true);
+    } else {
+        // 체크박스가 체크 해제된 경우
+    	$("#check4, #check4-1").prop("checked", false);
+    }
+});
+
+$("#check5").change(function() {
+	if($(this).is(":checked")) {
+        // 체크박스가 체크된 경우
+		$("#check5, #check5-1, #check5-2").prop("checked", true);
+    } else {
+        // 체크박스가 체크 해제된 경우
+    	$("#check5, #check5-1, #check5-2").prop("checked", false);
+    }
+});
+
+$("#check5-1, #check5-2").change(function() {
+	if($(this).is(":checked")) {
+        // 체크박스가 체크된 경우
+		if($("#check5-1").is(":checked")&& $("#check5-2").is(":checked")) {
+			$("#check5").prop("checked", true);
+		}
+    } else {
+        // 체크박스가 체크 해제된 경우
+    	$("#check5").prop("checked", false);
+    }
+});
+
+$(".checklist").change(function() {
+	if($(this).is(":checked")) {
+        // 체크박스가 체크된 경우
+        $(".checklist").each(function() {
+        	if (!$(this).is(":checked")) {
+				return;
+        	}
+        	$("#checkAll").prop("checked", true);
+		});
+		
+    } else {
+        // 체크박스가 체크 해제된 경우
+    	$("#checkAll").prop("checked", false);
+    }
+});
+
+
+$("#nextBtn").click(function() {
+
+	var allchecked = false;
+	$("#result").css("display", "none");
+	
+    //전체 약관 확인
+	$(".checklist").each(function() {
+    	if(!$(this).is(":checked")) {
+    		$("#result").css("display", "block");
+    	} else {
+    		allchecked = true;
+    	}
+	});
+	
+    //나이 약관 확인
+    if(!$("#checkAge").is(":checked")) {
+    	$("#result").css("display", "block");
+    	allchecked = false;
+    }
+    
+    if(allchecked) {
+    	window.location.href = "<%=request.getContextPath()%>/index.jsp?workgroup=client&work=client_join";
+    }
+});
+
+
 
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
