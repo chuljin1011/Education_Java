@@ -286,7 +286,7 @@ td {
 		<% } %>
 
 		<%-- 다음 블럭을 출력할 수 있는 링크 제공 --%>
-		<% if(endPage != totalPage) { %>
+		<% if(endPage != totalPage) { %>	
 			<a href="<%=myUrl%>&pageNum=<%=startPage+blockSize%>">[다음]</a>
 		<% } else { %>
 			[다음]
