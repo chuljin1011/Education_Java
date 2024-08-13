@@ -21,7 +21,7 @@ table {
 td {
 	border: 1px solid black;
 	text-align: center;
-	padding: 3px;	 
+	padding: 3px;	
 }
 
 .no { width: 100px; }

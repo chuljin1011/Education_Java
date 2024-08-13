@@ -15,7 +15,7 @@
 	reply2.setReplyId("xyz789");
 	reply2.setReplyContent("첫번째 게시글에 대한 [댓글-2]입니다.");
 	MyReplyDAO.getDAO().insertReply(reply2);
-	 
+	
 	MyReply reply3=new MyReply();
 	reply3.setReplyCommentNo(1);
 	reply3.setReplyId("opq456");

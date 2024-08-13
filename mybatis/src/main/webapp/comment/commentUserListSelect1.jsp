@@ -25,7 +25,7 @@ td {
 
 .no { width: 100px; }
 .name { width: 150px; }
-.content { width: 250px; } 
+.content { width: 250px; }
 .date { width: 200px; }
 </style>
 </head>

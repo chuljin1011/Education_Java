@@ -36,7 +36,7 @@ td {
 			<td>생년월일</td>
 		</tr>
 		
-		<% for(Student student : studentList) { %>
+		<%for(Student student : studentList) { %>
 		<tr>
 			<td><%=student.getNo() %></td>
 			<td><%=student.getName() %></td>
@@ -48,16 +48,3 @@ td {
 	</table>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
