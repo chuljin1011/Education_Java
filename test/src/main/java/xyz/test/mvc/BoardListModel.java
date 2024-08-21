@@ -20,7 +20,7 @@ public class BoardListModel implements Action {
 			request.setAttribute("boardList", BoardService.getService().getUserinfoList());
 			
 			actionForward.setForward(true);
-			actionForward.setPath("/model_two/board_list.jsp");
+			actionForward.setPath("/board_list.jsp");
 		} catch (Exception e) {
 			e.printStackTrace();
 			actionForward.setForward(false);

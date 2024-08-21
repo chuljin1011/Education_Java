@@ -94,7 +94,6 @@ function userLogin() {
 		  <table width=590 border=0 cellpadding=0 cellspacing=0>
 			  <tr>
 				<td align=center>
-					<button type="button" onclick="location.href='<c:url value="/board.do"/>';">게시판</button>
 					<button type="button" onclick="location.href='<c:url value="/list.do"/>';">회원목록</button>
 					<button type="button" onclick="location.href='<c:url value="/logout.do"/>';">로그아웃</button>
 					<c:if test="${loginUserinfo.auth == 9 }">
