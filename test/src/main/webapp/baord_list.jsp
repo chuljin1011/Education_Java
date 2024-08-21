@@ -20,7 +20,8 @@
 		
 		<tr>
 			<td>${boardinfo.num }</td>
-			<td><a href="<c:url value="/boardView.do"/>" >${boardinfo.writer }</a></td>
+			<%-- <td><a href="<c:url value="/boardView.do"/>" >${boardinfo.writer }</a></td> --%>
+			<td>${boardinfo.writer }</td>
 			<td>${boardinfo.regdate }</td>
 		</tr>
 		

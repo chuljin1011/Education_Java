@@ -7,7 +7,7 @@
   <!-- => servlet 엘리먼트보다 먼저 작성 -->
   <filter>
   	<filter-name>Encoding Filter</filter-name>
-  	<filter-class>xyz.itwill.filter.EncodingFilter</filter-class>
+  	<filter-class>xyz.test.filter.EncodingFilter</filter-class>
   </filter>
   
   <!-- filter-mapping : 필터가 동작되기 위한 URL 패턴을 등록하기 위한 엘리먼트 -->
@@ -20,7 +20,7 @@
   <!-- servlet : 클래스를 서블릿으로 등록하기 위한 엘리먼트 -->
   <servlet>
   	<servlet-name>controller</servlet-name>
-  	<servlet-class>xyz.itwill.mvc.ControllerServlet</servlet-class>
+  	<servlet-class>xyz.test.mvc.ControllerServlet</servlet-class>
   	<!-- init-param : 서블릿 클래스에게 값을 제공하기 위한 엘리먼트 -->
   	<init-param>
   		<param-name>configFilePath</param-name>

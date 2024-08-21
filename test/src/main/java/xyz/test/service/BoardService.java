@@ -25,7 +25,7 @@ public class BoardService {
 		return _service;
 	}
 	
-	public List<BoardDTO> getUserinfoList() throws SQLException {
+	public List<BoardDTO> getBoards() throws SQLException {
 		return BoardDAO.getDAO().selectBoardList();
 	}
 	
