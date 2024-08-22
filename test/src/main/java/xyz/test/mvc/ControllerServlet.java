@@ -170,7 +170,8 @@ public class ControllerServlet extends HttpServlet {
 		//Map 객체에서 맵키(Command)를 사용해 맵값(Model 객체)을 반환받아 저장
 		// => 프로그램의 가독성 증가
 		Action action=actionMap.get(command);
-		if(action == null) {//맵키에 대한 맵값이 없는 경우 
+		if(action == null) {//맵키에 대한 맵값이 없는 경우
+			System.out.println("ControllerServlet class actionMap=null 발생 "); // test
 			action=actionMap.get("/error.do");
 		}
 		
