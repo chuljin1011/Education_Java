@@ -1,4 +1,4 @@
-﻿﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
 <%-- 비로그인 사용자인 경우 - 사용자로부터 인증정보를 입력받기 위한 JSP 문서 --%>
@@ -9,7 +9,7 @@
 <%-- => [회원등록] 태그를 클릭한 경우 [/writeform.do] 주소를 요청하여 페이지 이동 - 관리자에게만 태그 제공 --%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
+<head> 
 <title>MVC</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <%-- <link rel=stylesheet href="<%=request.getContextPath() %>/model_two/css/user.css" type="text/css"> --%>

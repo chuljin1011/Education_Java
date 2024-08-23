@@ -18,6 +18,9 @@ public class ControllerServlet extends HttpServlet {
 
 	private Map<String, Action> actionMap;
 	
+	public ControllerServlet() {
+		System.out.println("ControllerServlet 기본 생성자");
+	}
 
 	@Override
 	public void init(ServletConfig config) throws ServletException {
@@ -54,7 +57,7 @@ public class ControllerServlet extends HttpServlet {
 		//ServletConfig.getInitParameter(String name) : [web.xml] 파일의 init-param 엘리먼트로
 		//제공된 값을 읽어와 반환하는 메소드
 		String configFilePath=config.getServletContext().getRealPath(config.getInitParameter("configFilePath"));
-		//System.out.println("configFilePath = "+configFilePath);
+		System.out.println("configFilePath = "+configFilePath);
 		
 		try {
 			//Properties 파일의 시스템 경로로 파일 입력스트림을 생성하여 저장

@@ -6,9 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import xyz.test.service.BoardService;
-
-public class BoardListModel implements Action {
+public class GoBoardModel implements Action {
 
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response)
@@ -17,10 +15,8 @@ public class BoardListModel implements Action {
 		ActionForward actionForward=new ActionForward();
 		try {
 			
-			request.setAttribute("boardList", BoardService.getService().getBoards());
-			
 			actionForward.setForward(true);
-			actionForward.setPath("baord_list.jsp");
+			actionForward.setPath("go_board.jsp");
 		} catch (Exception e) {
 			e.printStackTrace();
 			actionForward.setForward(false);
