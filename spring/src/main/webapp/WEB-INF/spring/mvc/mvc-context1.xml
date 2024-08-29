@@ -14,7 +14,7 @@
 	요청정보를 맵키로 설정하고 요청 처리 클래스의 클래스의 식별자(beanName)를 맵값으로 설정한 엔트리 추가 -->
 	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
 		<property name="mappings">
-			<!-- Map 객체를 생성하기 위해 map 엘리먼트 사용 - map 엘리먼트 대신 pros 엘리먼트 사용 가능 -->
+			<!-- Map 객체를 생성하기 위해 map 엘리먼트 사용 - map 엘리먼트 대신 prop 엘리먼트 사용 가능 -->
 			<props>
 				<prop key="/list.do">listController</prop>
 				<prop key="/view.do">viewController</prop>
