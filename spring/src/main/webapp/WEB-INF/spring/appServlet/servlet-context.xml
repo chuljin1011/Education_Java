@@ -67,6 +67,8 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="xyz.itwill09.controller" />
+	<context:component-scan base-package="xyz.itwill09.dao" />
+	<context:component-scan base-package="xyz.itwill09.service" />
 	
 	<!-- MessageSource 인터페이스를 상속받은 클래스를 Spring Bean으로 등록 -->
 	<!-- => ReloadableResourceBundleMessageSource 클래스로 메세지 관리 기능 제공 -->
@@ -101,12 +103,3 @@
 		<beans:property name="defaultLocale" value="ko"/>
 	</beans:bean>
 </beans:beans>
-
-
-
-
-
-
-
-
-

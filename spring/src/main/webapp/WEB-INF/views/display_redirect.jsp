@@ -7,7 +7,7 @@
 <title>SPRING</title>
 </head>
 <body>
-	<h1>포워드 이동</h1>
+	<h1>리다이렉트 이동</h1>
 	<hr>
 	<h2>${name }님, 환영합니다.</h2>
 </body>
