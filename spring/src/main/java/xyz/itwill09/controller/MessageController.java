@@ -45,3 +45,4 @@ public class MessageController {
 		return "message/success";
 	}
 }
+ 
