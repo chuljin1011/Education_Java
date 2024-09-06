@@ -20,20 +20,16 @@ public class PointUserDAOImpl implements PointUserDAO {
 	@Override
 	public int updatePlusPointUser(String id) {
 		return sqlSession.getMapper(PointUserMapper.class).updatePlusPointUser(id);
-
 	}
 
 	@Override
 	public int updateMinusPointUser(String id) {
 		return sqlSession.getMapper(PointUserMapper.class).updateMinusPointUser(id);
-
 	}
 
 	@Override
 	public PointUser selectPointUser(String id) {
 		return sqlSession.getMapper(PointUserMapper.class).selectPointUser(id);
-
 	}
-	
 
 }
