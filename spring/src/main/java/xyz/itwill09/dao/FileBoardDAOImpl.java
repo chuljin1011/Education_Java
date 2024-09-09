@@ -14,7 +14,7 @@ import xyz.itwill09.mapper.FileBoardMapper;
 @RequiredArgsConstructor
 public class FileBoardDAOImpl implements FileBoardDAO {
 	private final SqlSession sqlSession;
-	
+		
 	@Override
 	public int insertFileBoard(FileBoard board) {
 		return sqlSession.getMapper(FileBoardMapper.class).insertFileBoard(board);
@@ -39,5 +39,4 @@ public class FileBoardDAOImpl implements FileBoardDAO {
 	public List<FileBoard> selectFileBoardList(Map<String, Object> map) {
 		return sqlSession.getMapper(FileBoardMapper.class).selectFileBoardList(map);
 	}
-
 }
