@@ -40,8 +40,8 @@ public class PaymentServiceImpl implements PaymentService {
 			//OpenAPI를 요청할 수 있는 정보가 저장된 HttpURLConnection 객체를 반환하는 메소드
 			HttpURLConnection connection=(HttpURLConnection)url.openConnection();
 			
-			//HttpURLConnection.setRequestMethod(String method) : HttpURLConnection 객체에
-			//저장된 요청정보로 페이지를 요청하기 위한 요청방식을 변경하는 메소드
+			//.setRequestMethod(String method) : HttpURLConnection 객체에
+			//저장된 요청HttpURLConnection정보로 페이지를 요청하기 위한 요청방식을 변경하는 메소드
 			// => OpenAPI를 [post] 방식으로 요청할 수 있도록 변경
 			connection.setRequestMethod("POST");
 
