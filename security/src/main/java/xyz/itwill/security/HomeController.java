@@ -1,8 +1,13 @@
 package xyz.itwill.security;
 
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import xyz.itwill.auth.CustomUserDetails;
 
 //Spring Security : 인증과 인가 기능을 제공하는 보안 프레임워크
 //인증(Authentication) : 프로그램을 사용할 수 있는 사용자가 맞는지를 확인하는 절차
@@ -51,10 +56,49 @@ import org.springframework.web.bind.annotation.RequestMethod;
 //11.CorsFilter : 허가된 사이트나 클라이언트의 요청인지 검사하는 필터
 //12.CsrfFilter : CSRF Tocken을 사용하여 CSRF 공격을 막아주는 기능을 제공하는 필터
 
+@Slf4j
 @Controller
+@RequiredArgsConstructor
 public class HomeController {
+	/*
+	private final SecurityUserService securityUserService;
+	
+	//요청 처리 메소드의 매개변수를 Principal 인터페이스로 작성하면 Front Controller에게
+	//Principal 객체를 제공받아 사용 가능
+	// => Principal 객체 : 로그인 사용자 정보가 저장된 객체 - 로그인 사용자의 아이디 제공
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home() {
+	public String home(Principal principal) {
+		if(principal != null) {//인증 처리된 사용자인 경우
+			//Principal.getName() : 인증 처리된 사용자의 식별자(아이디)를 반환하는 메소드
+			//log.warn("아이디 = "+principal.getName());
+			
+			SecurityUser user=securityUserService.getSecurityUserByUserid(principal.getName());
+			log.warn("아이디 = "+user.getUserid());
+			log.warn("이름 = "+user.getName());
+			log.warn("이메일 = "+user.getEmail());
+		}
+		return "main_page";
+	}
+	*/
+
+	//Principal 인터페이스 >> Authentication 인터페이스 >> AbstractAuthenticationToken 추상클래스
+	// >> UsernamePasswordAuthenticationToken 클래스 - 구현 클래스
+	
+	//요청 처리 메소드의 매개변수를 Authentication 인터페이스로 작성하면 Front Controller에게
+	//Authentication 객체를 제공받아 사용 가능
+	// => Authentication 객체 : 로그인 사용자 및 권한 정보가 저장된 객체
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String home(Authentication authentication) {
+		if(authentication != null) {//인증 처리된 사용자인 경우
+			//Authentication.getPrincipal() : 로그인 사용자 및 권한 정보가 저장된 UserDetailes
+			//객체(CustomUserDetailes 객체)를 반환하는 메소드
+			// => Object 객체를 반환하므로 명시적 객체 형변환 후 사용
+			CustomUserDetails user=(CustomUserDetails)authentication.getPrincipal();
+			
+			log.warn("아이디 = "+user.getUserid());
+			log.warn("이름 = "+user.getName());
+			log.warn("이메일 = "+user.getEmail());
+		}
 		return "main_page";
 	}
 	

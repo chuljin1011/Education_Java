@@ -42,8 +42,19 @@ public class LoginController {
 		return "ok";
 	}
 	
-	@RequestMapping(value = "/loginPage", method = RequestMethod.GET)
-	public String loginPage() {
-		return "login_page";
+	@RequestMapping(value = "/user_login", method = RequestMethod.GET)
+	public String userLogin() {
+		return "form_login";
 	}
+	
+	@RequestMapping(value = "/access_denied", method = RequestMethod.GET)
+	public String accessDenied() {
+		return "access_denied";
+	}
+	
+	@RequestMapping(value = "/session_error", method = RequestMethod.GET)
+	public String sessionError() {
+		return "session_error";
+	}
+	
 }

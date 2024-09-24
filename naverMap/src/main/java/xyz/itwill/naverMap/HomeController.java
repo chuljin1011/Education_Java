@@ -33,7 +33,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "kakao_view";
+		return "kakao";
 	}
 	
 }
