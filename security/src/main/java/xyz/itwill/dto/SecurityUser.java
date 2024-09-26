@@ -7,14 +7,14 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /*
-create table security_users(userid varchar2(100) primary key, passwd varchar2(100), name varchar2(50)
-    , email varchar2(100), enabled varchar2(1));
+create table security_user(userid varchar2(100) primary key, passwd varchar2(100)
+    , name varchar2(50), email varchar2(100), enabled varchar2(1));
     
 create table security_auth(userid varchar2(100), auth varchar2(50)
-    , constraint auth_uerid_fk foreign key(userid) references security_users(userid));
+    , constraint auth_userid_fk foreign key(userid) references security_user(userid));
     
-create unique index auth_userid_index on security_auth(userid, auth);
- */
+create unique index auth_userid_index on security_auth(userid, auth); 
+*/
 
 @Data
 @NoArgsConstructor
@@ -25,5 +25,5 @@ public class SecurityUser {
 	private String name;
 	private String email;
 	private String enabled;
-	private List<SecurityAuth> SecurityAuthList;
+	private List<SecurityAuth> securityAuthList;	
 }
