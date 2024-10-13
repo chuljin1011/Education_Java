@@ -26,6 +26,7 @@
 	<context:component-scan base-package="xyz.itwill.security" />
 	<!-- <context:component-scan base-package="xyz.itwill.dao" /> -->
 	<context:component-scan base-package="xyz.itwill.service" />
+	<context:component-scan base-package="xyz.itwill.test" />
 	
 	<!-- global-method-security : Controller 클래스의 요청 처리 메소드에 권한 관련 어노테이션을
 	제공하기 위한 엘리먼트 -->
